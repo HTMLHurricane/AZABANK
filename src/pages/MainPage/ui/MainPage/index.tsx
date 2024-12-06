@@ -123,11 +123,11 @@ export const MainPage: React.FC = () => {
     useEffect(() => {
         // Устанавливаем процентную ставку в зависимости от срока кредита
         if (loanTerm < 5) {
-            setInterestRate(30);
+            setInterestRate(13);
         } else if (loanTerm >= 5 && loanTerm < 10) {
-            setInterestRate(50);
+            setInterestRate(15);
         } else if (loanTerm >= 10) {
-            setInterestRate(65);
+            setInterestRate(27);
         }
     }, [loanTerm]);
 
@@ -219,14 +219,14 @@ export const MainPage: React.FC = () => {
                             tooltip="Выберите процентную ставку"
                         >
                             <Select value={interestRate} disabled>
-                                <Select.Option value={30}>
-                                    30% (до 5 лет)
+                                <Select.Option value={13}>
+                                    13% (до 5 лет)
                                 </Select.Option>
-                                <Select.Option value={50}>
-                                    50% (от 5 до 10 лет)
+                                <Select.Option value={15}>
+                                    15% (от 5 до 10 лет)
                                 </Select.Option>
-                                <Select.Option value={65}>
-                                    65% (более 10 лет)
+                                <Select.Option value={27}>
+                                    27% (более 10 лет)
                                 </Select.Option>
                             </Select>
                         </Form.Item>
